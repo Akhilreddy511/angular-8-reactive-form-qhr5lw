@@ -11,9 +11,24 @@ export class AppComponent {
   selectedIndex: any;
 
   formData = [
-    { fullName: 'Akhil', email: 'akhil@123.com', message: 'good morning',phone:'9000143994' },
-    { fullName: 'vinay', email: 'akhil@123.com', message: 'good morning',phone:'9000' },
-    { fullName: 'kalyan', email: 'akhil@123.com', message: 'good morning',phone:'78999' },
+    {
+      fullName: 'Akhil',
+      email: 'akhil@123.com',
+      message: 'good morning',
+      phone: '9000143994',
+    },
+    {
+      fullName: 'vinay',
+      email: 'akhil@123.com',
+      message: 'good morning',
+      phone: '9000',
+    },
+    {
+      fullName: 'kalyan',
+      email: 'akhil@123.com',
+      message: 'good morning',
+      phone: '78999',
+    },
   ];
 
   contactForm: FormGroup;
