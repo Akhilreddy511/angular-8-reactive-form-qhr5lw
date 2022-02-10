@@ -1,0 +1,60 @@
+<h1>Reactive Contact Form Example</h1>
+
+<form [formGroup]="contactForm">
+  <input
+    type="text"
+    name="fullName"
+    placeholder="Your full name"
+    formControlName="fullName"
+  />
+  <br />
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Your email"
+    formControlName="email"
+  />
+  <br />
+  <input
+    type="text"
+    name="phone"
+    placeholder="Your Phone"
+    formControlName="phone"
+  />
+  <br />
+  <textarea
+    name="message"
+    placeholder="Your message"
+    formControlName="message"
+  ></textarea>
+  <br />
+
+  <div *ngIf="!isUpdated">
+    <input type="submit" (click)="onSubmit()" value="Submit" />
+  </div>
+  <div *ngIf="isUpdated">
+    <button (click)="onSubmit()">update</button>
+  </div>
+</form>
+
+<table style="border:2px solid">
+  <tr style="border:2px solid">
+    <th>Sr. no</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Message</th>
+    <th>Phone</th>
+    <th>Action</th>
+  </tr>
+
+  <tr style="border:2px solid" *ngFor="let data of formData; let i = index">
+    <td>{{ i + 1 }}</td>
+    <td>{{ data.fullName }}</td>
+    <td>{{ data.email }}</td>
+    <td>{{ data.message }}</td>
+    <td>{{ data.phone }}</td>
+    <td><button (click)="delete(i)">Delete</button></td>
+    <td><button (click)="update(data, i)">Edit</button></td>
+  </tr>
+</table>
