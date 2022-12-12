@@ -16,18 +16,21 @@ export class AppComponent {
       email: 'akhil@123.com',
       message: 'good morning',
       phone: '9000143994',
+      isChecked:true
     },
     {
       fullName: 'vinay',
       email: 'akhil@123.com',
       message: 'good morning',
       phone: '9000',
+      isChecked:true
     },
     {
       fullName: 'kalyan',
       email: 'akhil@123.com',
       message: 'good morning',
       phone: '78999',
+      isChecked:false
     },
   ];
 
