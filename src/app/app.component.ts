@@ -9,9 +9,21 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 export class AppComponent {
   isUpdated: boolean = false;
   selectedIndex: any;
+  export(){
+    const ids = this.formData.reduce((acc, item) => {
+      if (item.isChecked === true) {
+        acc.push(item.id);
+      }
+      return acc;
+    }, []);
+
+    console.log('ids',ids)
+    
+  }
 
   formData = [
     {
+      id:1,
       fullName: 'Akhil',
       email: 'akhil@123.com',
       message: 'good morning',
@@ -19,6 +31,7 @@ export class AppComponent {
       isChecked:true
     },
     {
+      id:2,
       fullName: 'vinay',
       email: 'akhil@123.com',
       message: 'good morning',
@@ -26,6 +39,7 @@ export class AppComponent {
       isChecked:true
     },
     {
+      id:3,
       fullName: 'kalyan',
       email: 'akhil@123.com',
       message: 'good morning',
